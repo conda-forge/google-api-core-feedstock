@@ -18,8 +18,9 @@ This library is not meant to stand-alone. Instead it defines common helpers used
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/google-api-core-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/google-api-core-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/google-api-core-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/google-api-core-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/google-api-core-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/google-api-core-feedstock/branch/master)
 
 Current release info
 ====================
