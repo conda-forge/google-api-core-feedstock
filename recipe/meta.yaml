@@ -2,7 +2,7 @@
 {% set version = "1.9.0" %}
 {% set sha256 = "fc1fea74bd863fb71486066e0c6b3a4dad26fb70ec61a0edcada8637feb77c68" %}
 {% set build = 0 %}
-{% set data = load_setup_py_data() %}
+
 package:
   name: {{ name|lower }}-feedstock
   version: {{ version }}
@@ -107,10 +107,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: {{ data.get('url') }}
-      license: {{ data.get('license') }}
+      home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
+      license: Apache 2.0
       license_family: APACHE
-      summary: {{ data.get('description') }}
+      summary: 'Core Library for Google Client Libraries with grpc'
       description: |
         Core Library for Google Client Libraries with grpc
         -------------------------
@@ -177,10 +177,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: {{ data.get('url') }}
-      license: {{ data.get('license') }}
+      home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
+      license: Apache 2.0
       license_family: APACHE
-      summary: {{ data.get('description') }}
+      summary: 'Core Library for Google Client Libraries with grpcio-gcp'
       description: |
         Core Library for Google Client Libraries with grpcio-gcp
         -------------------------
@@ -246,10 +246,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: {{ data.get('url') }}
-      license: {{ data.get('license') }}
+      home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
+      license: Apache 2.0
       license_family: APACHE
-      summary: {{ data.get('description') }}
+      summary: 'Core Library for Google Client Libraries with grpcio-gcp'
       description: |
         Core Library for Google Client Libraries with grpcgcp
         -------------------------
@@ -273,10 +273,10 @@ outputs:
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
 
 about:
-  home: {{ data.get('url') }}
-  license: {{ data.get('license') }}
+  home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
+  license: Apache 2.0
   license_family: APACHE
-  summary: {{ data.get('description') }}
+  summary: 'Core Library for Google Client Libraries'
   description: |
     Core Library for Google Client Libraries
     -------------------------
