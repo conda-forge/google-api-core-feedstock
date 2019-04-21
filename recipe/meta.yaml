@@ -17,7 +17,7 @@ build:
 outputs:
   - name: {{ name }}
     build:
-      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
+      script: python -m pip install . --no-deps --ignore-installed --verbose
     requirements:
       host:
         - python
