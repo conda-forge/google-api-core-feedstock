@@ -32,9 +32,9 @@ outputs:
       run:
         - {{ pin_compatible('futures') }}  # [py<32]
         - {{ pin_compatible('google-auth') }}
-        - {{ pin_compatible('googleapis-common-protos', min_pin='x', max_pin='x') }}
+        - {{ pin_compatible('googleapis-common-protos') }}
         - {{ pin_compatible('pytz') }}
-        - {{ pin_compatible('requests', min_pin='x', max_pin='x') }}
+        - {{ pin_compatible('requests') }}
         - {{ pin_compatible('setuptools') }}
         - {{ pin_compatible('six') }}
     test:
