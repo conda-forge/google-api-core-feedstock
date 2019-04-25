@@ -1,0 +1,15 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.6
+  - pip >=18.1
+  - google-auth >=0.4.0,<2.0.0dev
+  - googleapis-common-protos >=1.5.3,<2.0dev
+  - protobuf>=3.4.0
+  - pytz >=2019.1
+  - requests >=2.18.0,<3.0.0dev
+  - setuptools >=34.0.0
+  - six >=1.10.0
+  - pip:
+    - google-api-core ==1.9.0

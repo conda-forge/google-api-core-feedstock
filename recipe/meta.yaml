@@ -30,6 +30,7 @@ outputs:
         - futures >=3.2.0  # [py2k]
         - google-auth >=0.4.0,<2.0.0dev
         - googleapis-common-protos >=1.5.3,<2.0dev
+        - protobuf >=3.4.0,<3.7.0
         - pytz >=2019.1
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
@@ -38,6 +39,7 @@ outputs:
         - {{ pin_compatible('futures') }}  # [py2k]
         - {{ pin_compatible('google-auth') }}
         - {{ pin_compatible('googleapis-common-protos') }}
+        - {{ pin_compatible('protobuf') }}
         - {{ pin_compatible('pytz') }}
         - {{ pin_compatible('requests') }}
         - {{ pin_compatible('setuptools') }}
@@ -72,7 +74,7 @@ outputs:
 
   - name: {{ name }}-grpc
     build:
-      skip: True  # [win and vc<10]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -143,7 +145,7 @@ outputs:
 
   - name: {{ name }}-grpcio-gcp
     build:
-      skip: True  # [win and vc<10]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -216,7 +218,7 @@ outputs:
 
   - name: {{ name }}-grpcgcp
     build:
-      skip: True  # [win and vc<10]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
