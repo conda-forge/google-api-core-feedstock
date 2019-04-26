@@ -13,13 +13,19 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and vc<14 and py2k]
+  skip: True  # [win and vc<14]
+
+requirements:
+  host:
+    - python >=2.7
+    - pip >=18.1
+    - setuptools >=34.0.0
 
 outputs:
   - name: {{ name }}
     build:
       script: "{{ PYTHON }} -m pip install . --no-deps  --ignore-installed --verbose"
-      skip: True  # [win and vc<14 and py2k]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -70,7 +76,7 @@ outputs:
 
   - name: {{ name }}-grpc
     build:
-      skip: True  # [win and vc<14 and py2k]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -141,7 +147,7 @@ outputs:
 
   - name: {{ name }}-grpcio-gcp
     build:
-      skip: True  # [win and vc<14 and py2k]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -214,7 +220,7 @@ outputs:
 
   - name: {{ name }}-grpcgcp
     build:
-      skip: True  # [win and vc<14 and py2k]
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
