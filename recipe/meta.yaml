@@ -14,15 +14,21 @@ source:
 build:
   number: 0
 
+requirements:
+  host:
+    - python >=2.7
+    - pip >=18.1
+    - setuptools >=34.0.0
+  run:
+    - python >=2.7
+    - pip >=18.1
+    - setuptools >=34.0.0
+
 outputs:
   - name: {{ name }}
     build:
-      script: python -m pip install . --no-deps --ignore-installed --verbose
+      script: "{{ PYTHON }} -m pip install . --no-deps  --ignore-installed --verbose"
     requirements:
-      build:
-        - python
-        - setuptools
-        - pip
       host:
         - python
         - pip >=18.1
@@ -34,6 +40,7 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.10.0
       run:
+        - {{ pin_compatible('python') }}
         - {{ pin_compatible('futures') }}  # [py2k]
         - {{ pin_compatible('google-auth') }}
         - {{ pin_compatible('googleapis-common-protos') }}
@@ -73,14 +80,11 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
-      build:
-        - python
-        - setuptools
-        - pip
       host:
         - python
         - grpcio >=1.8.2
       run:
+        - {{ pin_compatible('python') }}
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('grpcio') }}
     test:
@@ -148,14 +152,11 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
-      build:
-        - python
-        - setuptools
-        - pip
       host:
         - python
         - grpcio-gcp >=0.2.2
       run:
+        - {{ pin_compatible('python') }}
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('grpcio-gcp') }}
     test:
@@ -225,13 +226,10 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
-      build:
-        - python
-        - setuptools
-        - pip
       host:
         - python
       run:
+        - {{ pin_compatible('python') }}
         - {{ pin_subpackage(name + '-grpcio-gcp', min_pin='x.x', max_pin='x.x') }}
     test:
       imports:
