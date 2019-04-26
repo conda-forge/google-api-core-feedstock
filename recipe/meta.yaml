@@ -74,7 +74,7 @@ outputs:
 
   - name: {{ name }}-grpc
     build:
-      skip: True  # [win and vc<14]
+      skip: True  # [win and vc<14 and py2k]
     requirements:
       host:
         - python
@@ -146,7 +146,7 @@ outputs:
 
   - name: {{ name }}-grpcio-gcp
     build:
-      skip: True  # [win and vc<14]
+      skip: True  # [win and vc<14 and py2k]
     requirements:
       host:
         - python
@@ -220,7 +220,7 @@ outputs:
 
   - name: {{ name }}-grpcgcp
     build:
-      skip: True  # [win and vc<14]
+      skip: True  # [win and vc<14 and py2k]
     requirements:
       host:
         - python
