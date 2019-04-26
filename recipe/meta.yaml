@@ -7,31 +7,28 @@ package:
   version: {{ version }}
 
 source:
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [win and vc<14]
-
-requirements:
-  build:
-    - python
-    - setuptools
-    - pip
 
 outputs:
   - name: {{ name }}
     build:
       script: python -m pip install . --no-deps --ignore-installed --verbose
     requirements:
+      build:
+        - python
+        - setuptools
+        - pip
       host:
         - python
         - pip >=18.1
         - futures >=3.2.0  # [py2k]
         - google-auth >=0.4.0,<2.0.0dev
         - googleapis-common-protos >=1.5.3,<2.0dev
-        - protobuf >=3.4.0,<3.7.0
         - pytz >=2019.1
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
@@ -40,7 +37,6 @@ outputs:
         - {{ pin_compatible('futures') }}  # [py2k]
         - {{ pin_compatible('google-auth') }}
         - {{ pin_compatible('googleapis-common-protos') }}
-        - {{ pin_compatible('protobuf', lower_bound='3.4.0', upper_bound='3.7.0') }}
         - {{ pin_compatible('pytz') }}
         - {{ pin_compatible('requests') }}
         - {{ pin_compatible('setuptools') }}
@@ -77,6 +73,10 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
+      build:
+        - python
+        - setuptools
+        - pip
       host:
         - python
         - grpcio >=1.8.2
@@ -148,6 +148,10 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
+      build:
+        - python
+        - setuptools
+        - pip
       host:
         - python
         - grpcio-gcp >=0.2.2
@@ -221,6 +225,10 @@ outputs:
     build:
       skip: True  # [win and vc<14]
     requirements:
+      build:
+        - python
+        - setuptools
+        - pip
       host:
         - python
       run:
