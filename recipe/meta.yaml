@@ -37,6 +37,7 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.10.0
       run:
+        - {{ pin_compatible('python') }}
         - {{ pin_compatible('futures') }}  # [py2k]
         - {{ pin_compatible('google-auth') }}
         - {{ pin_compatible('googleapis-common-protos') }}
