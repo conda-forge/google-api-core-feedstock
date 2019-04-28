@@ -139,7 +139,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -212,7 +214,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -283,7 +287,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -309,7 +315,9 @@ about:
 
     Deprecated Python Versions
     --------------------------
-    Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+    Python == 2.7
+    - Python 2.7 support will be removed on January 1, 2020.
+    - protobuf does not support Visual C++ 2008, windows py27 package not available
 
   doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
   dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
