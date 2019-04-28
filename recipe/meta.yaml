@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-  {% set version = "1.9.0" %}
-  {% set sha256 = "fc1fea74bd863fb71486066e0c6b3a4dad26fb70ec61a0edcada8637feb77c68" %}
+{% set version = "1.9.0" %}
+{% set sha256 = "fc1fea74bd863fb71486066e0c6b3a4dad26fb70ec61a0edcada8637feb77c68" %}
 
 package:
   name: {{ name|lower }}-split
@@ -16,20 +16,20 @@ build:
 
 requirements:
   host:
-    - python >=2.7
+    - python
     - pip >=18.1
     - setuptools >=34.0.0
 
 outputs:
   - name: {{ name }}
     build:
-      script: "{{ PYTHON }} -m pip install . --no-deps  --ignore-installed --verbose"
+      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
       skip: True  # [win and vc<14]
     requirements:
       host:
         - python
         - pip >=18.1
-        - futures >=3.2.0  # [py2k]
+        - futures >=3.2.0  # [py27]
         - google-auth >=0.4.0,<2.0.0dev
         - googleapis-common-protos >=1.5.3,<2.0dev
         - pytz >=2019.1
@@ -37,14 +37,14 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.10.0
       run:
-        - {{ pin_compatible('python') }}
-        - {{ pin_compatible('futures') }}  # [py2k]
-        - {{ pin_compatible('google-auth') }}
+        - python
+        - futures  # [py27]
+        - google-auth
         - {{ pin_compatible('googleapis-common-protos') }}
-        - {{ pin_compatible('pytz') }}
-        - {{ pin_compatible('requests') }}
-        - {{ pin_compatible('setuptools') }}
-        - {{ pin_compatible('six') }}
+        - pytz
+        - requests
+        - setuptools
+        - six
     test:
       imports:
         - concurrent.futures
