@@ -40,7 +40,7 @@ outputs:
         - python
         - futures  # [py27]
         - google-auth
-        - {{ pin_compatible('googleapis-common-protos') }}
+        - googleapis-common-protos
         - pytz
         - requests
         - setuptools
@@ -82,7 +82,7 @@ outputs:
         - grpcio >=1.8.2
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('grpcio') }}
+        - grpcio
     test:
       imports:
         - concurrent.futures
@@ -155,7 +155,7 @@ outputs:
         - grpcio-gcp >=0.2.2
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('grpcio-gcp') }}
+        - grpcio-gcp
     test:
       imports:
         - concurrent.futures
