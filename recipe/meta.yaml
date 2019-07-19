@@ -298,6 +298,7 @@ about:
   home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
   license: Apache 2.0
   license_family: APACHE
+  license_file: LICENSE
   summary: 'Core Library for Google Client Libraries'
   description: |
     Core Library for Google Client Libraries
