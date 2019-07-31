@@ -35,7 +35,7 @@ outputs:
         - futures >=3.2.0  # [py27]
         - google-auth >=0.4.0,<2.0.0dev
         - googleapis-common-protos >=1.6.0,<2.0dev
-        - protobuf >= 3.4.0
+        - protobuf >=3.4.0
         - pytz
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
