@@ -59,7 +59,7 @@ outputs:
     requirements:
       host:
         - python
-        - grpcio >=1.8.2,<2.0dev
+        - grpcio >=1.29.0,<2.0dev
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio >=1.8.2
