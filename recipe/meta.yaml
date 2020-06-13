@@ -21,7 +21,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
-      script: {{ PYTHON }} -m pip install . -vv
+      script: {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
         - python
@@ -36,6 +36,8 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.10.0
     test:
+      requires:
+        - pip
       imports:
         - google.auth
         - google.auth.credentials
@@ -54,6 +56,8 @@ outputs:
         - google.api_core.protobuf_helpers
         - google.api_core.retry
         - google.api_core.timeout
+      commands:
+        - python -m pip check
 
   - name: {{ name }}-grpc
     requirements:
@@ -64,8 +68,12 @@ outputs:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio >=1.8.2
     test:
+      requires:
+        - pip
       imports:
         - google.api_core
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
       license: Apache-2.0
@@ -81,9 +89,13 @@ outputs:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio-gcp
     test:
+      requires:
+        - pip
       imports:
         - google.api_core
         - grpc
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
       license: Apache 2.0
@@ -97,10 +109,14 @@ outputs:
       run:
         - {{ pin_subpackage(name + '-grpcio-gcp', min_pin='x.x', max_pin='x.x') }}
     test:
+      requires:
+        - pip
       imports:
         - google.api_core
         - grpc
         - grpc_gcp
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
       license: Apache-2.0
