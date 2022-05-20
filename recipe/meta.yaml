@@ -100,7 +100,6 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage(name + '-grpcio-gcp', exact=True) }}
-        - grpcio-gcp >=0.2.2
     test:
       requires:
         - pip
