@@ -17,11 +17,12 @@ outputs:
   - name: {{ name }}
     build:
       noarch: python
-      script: python -m pip install . -vv --no-deps
+      script: python -m pip install . -vv --no-deps --no-build-isolation
     requirements:
       host:
         - python >=3.7
         - pip
+        - setuptools
       run:
         - python >=3.7
         - googleapis-common-protos >=1.56.2,<2.0.dev0
