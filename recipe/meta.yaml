@@ -1,5 +1,5 @@
 {% set name = "google-api-core" %}
-{% set version = "2.22.0" %}
+{% set version = "2.23.0" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 26f8d76b96477db42b55fd02a33aae4a42ec8b86b98b94969b7333a2c828bf35
+  sha256: 2ceb087315e6af43f256704b871d99326b1f12a9d6ce99beaedec99ba26a0ace
 
 build:
   number: 0
@@ -84,26 +84,6 @@ about:
   license_family: APACHE
   license_file: LICENSE
   summary: Core Library for Google Client Libraries
-  description: |
-    Core Library for Google Client Libraries
-    -------------------------
-
-    This package does not include the grpc, grpcio-gcp or grpcgcp extra requirements.
-
-    This library is not meant to stand-alone. Instead it defines
-    common helpers used by all Google API clients. For more information, see the
-    [documentation](https://googleapis.dev/python/google-api-core/latest/index.html).
-
-    Supported Python Versions
-    -------------------------
-    Python >= 3.5
-
-    Deprecated Python Versions
-    --------------------------
-    Python == 2.7
-    - Python 2.7 support will be removed on January 1, 2020.
-    - protobuf does not support Visual C++ 2008, windows py27 package not available
-
   doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
   dev_url: https://github.com/googleapis/python-api-core
 
