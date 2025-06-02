@@ -64,8 +64,8 @@ outputs:
         - {{ pin_subpackage(name, exact=True) }}
         # upstream has tightest bounds for py3.11; adopt these for all Python
         # versions to avoid giving up noarch builds
-        - grpcio >=1.49.1,<2.0.dev0
-        - grpcio-status >=1.49.1,<2.0.dev0
+        - grpcio >=1.49.1,<2.0.0
+        - grpcio-status >=1.49.1,<2.0.0
     test:
       requires:
         - pip
