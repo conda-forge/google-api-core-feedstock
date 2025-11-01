@@ -58,16 +58,22 @@ outputs:
 
   - name: {{ name }}-grpc
     build:
-      noarch: generic
+      # noarch: python rather than noarch: generic because different python constraints
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        # excluding python 3.14 for now because we don't have the required grpcio on conda-forge
+        - python >={{ python_min }},<3.14
         - {{ pin_subpackage(name, exact=True) }}
-        # upstream has tightest bounds for py3.11; adopt these for all Python
-        # versions to avoid giving up noarch builds
+        # upstream has tightest bounds for python >=3.14 but we can't yet support these, so we
+        # adopt python >=3.11 constraints for all python versions to avoid giving up noarch builds
         - grpcio >=1.49.1,<2.0.0
         - grpcio-status >=1.49.1,<2.0.0
     test:
       requires:
+        - python {{ python_min }}
         - pip
       imports:
         - google.api_core
