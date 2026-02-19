@@ -3,48 +3,22 @@ About google-api-core-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-api-core-feedstock/blob/main/LICENSE.txt)
 
-
-About google-api-core
----------------------
-
-Home: https://github.com/googleapis/python-api-core
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-api-core
 
 Package license: Apache-2.0
 
-Summary: Core Library for Google Client Libraries
+Summary: Google API client core library
 
-Development: https://github.com/googleapis/python-api-core
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-api-core
 
 Documentation: https://googleapis.dev/python/google-api-core/latest/index.html
 
-Core Library for Google Client Libraries
+Google API client core library
 -------------------------
-
-This package does not include the grpc, grpcio-gcp or grpcgcp extra requirements.
 
 This library is not meant to stand-alone. Instead it defines
 common helpers used by all Google API clients. For more information, see the
-[documentation](https://googleapis.dev/python/google-api-core/latest/index.html).
-
-Supported Python Versions
--------------------------
-Python >= 3.5
-
-Deprecated Python Versions
---------------------------
-Python == 2.7
-- Python 2.7 support will be removed on January 1, 2020.
-- protobuf does not support Visual C++ 2008, windows py27 package not available
-
-
-About google-api-core-grpc
---------------------------
-
-Home: https://github.com/googleapis/python-api-core
-
-Package license: Apache-2.0
-
-Summary: Core Library for Google Client Libraries with grpc
+[documentation](https://googleapis.dev/python/google-api-core/latest).
 
 Current build status
 ====================
