@@ -28,7 +28,7 @@ outputs:
         - setuptools
       run:
         - python >=${{ python_min }}
-        - googleapis-common-protos >=1.56.3,<2.0.0
+        - googleapis-common-protos >=1.63.2,<2.0.0
         - protobuf >=4.25.8,<7.0.0
         # use the most restrictive constraints (for python >=3.13) to remain noarch: python
         - proto-plus >=1.25.0,<2.0.0
