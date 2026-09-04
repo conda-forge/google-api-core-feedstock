@@ -33,6 +33,7 @@ outputs:
         - proto-plus >=1.26.1,<2.0.0
         - google-auth >=2.14.1,<3.0.0
         - requests >=2.33.0,<3.0.0
+        - opentelemetry-api >=1.44.0,<2.0.0
 
     tests:
       - python:
@@ -70,8 +71,10 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, exact=true) }}
+        # tightest of upstream's floors (python >=3.14)
         # using the tightest constraints for python >= 3.14
         - grpcio >=1.75.1,<2.0.0
+        # tightest of upstream's floors (python >=3.14)
         - grpcio-status >=1.75.1,<2.0.0
     tests:
       - python:
