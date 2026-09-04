@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-api-core
-  version: "2.34.0"
+  version: "2.36.0"
 
 recipe:
   name: ${{ name|lower }}-split
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 98a779fe72de956eb1c9c2f47ff4c4432a668ece1a002ec38bed07ec2698ae59
+  sha256: 32779307b52e64c9a9592a3621de6281676ecaeea299fe8524e4637ab7ac2531
 
 build:
   number: 0
@@ -33,7 +33,8 @@ outputs:
         - proto-plus >=1.26.1,<2.0.0
         - google-auth >=2.14.1,<3.0.0
         - requests >=2.33.0,<3.0.0
-    
+        - opentelemetry-api >=1.44.0,<2.0.0
+
     tests:
       - python:
           imports:
@@ -70,8 +71,9 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, exact=true) }}
-        # using the tightest constraints for python >= 3.14
+        # tightest of upstream's floors (python >=3.14)
         - grpcio >=1.75.1,<2.0.0
+        # tightest of upstream's floors (python >=3.14)
         - grpcio-status >=1.75.1,<2.0.0
     tests:
       - python:
