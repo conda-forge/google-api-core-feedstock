@@ -202,7 +202,5 @@ Feedstock Maintainers
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
 * [@parthea](https://github.com/parthea/)
-* [@tpdownes](https://github.com/tpdownes/)
 * [@tswast](https://github.com/tswast/)
 * [@xylar](https://github.com/xylar/)
-
