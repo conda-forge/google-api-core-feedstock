@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-api-core
-  version: "2.39.0"
+  version: "2.40.0"
 
 recipe:
   name: ${{ name|lower }}-split
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 824ee414a10adefefae33fc5e2ba28dc6f0f7089d011c9cc98ea9178e61299e9
+  sha256: ebee7d1b138b5362beecec260e6e8988ac97346562c7382ccb6f0ad8435c599f
 
 build:
   number: 0
